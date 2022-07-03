@@ -69,6 +69,7 @@ valid_query_fields = [
     "publisher_platforms",
     "region_distribution",
     "spend",
+    "url_128",
 ]
 
 

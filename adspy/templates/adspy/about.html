@@ -1,1 +1,16 @@
+{% load embed_video_tags %}
+
+
+{% video  %}
+    URL: {{ url }}    
+{% endvideo %}
+
+
+
 <h1> Aboout <h1/>
+
+<video width="400" height="500" controls>
+    <source src= '{{ url }}' >
+</video>
+
+<h1> {{url}} </h1>

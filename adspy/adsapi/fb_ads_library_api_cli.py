@@ -107,10 +107,10 @@ def validate_fields_param(fields_input):
 
 
 def FbAdsApi(args):
-    print(args)
+    #print(args)
     parser = get_parser()
     sys.argv[1:]=args
-    print(sys.argv[1:])
+    #print(sys.argv[1:])
     opts = parser.parse_args()
     
     if not opts.search_term and not opts.search_page_ids:

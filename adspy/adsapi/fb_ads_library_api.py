@@ -67,6 +67,7 @@ class FbAdsLibraryTraversal:
             self.ad_active_status,
             self.page_limit,
         )
+        #print(next_page_url)
         #return next_page_url
         return self.__class__._get_ad_archives_from_url(
             next_page_url, after_date=self.after_date, retry_limit=self.retry_limit
@@ -79,15 +80,14 @@ class FbAdsLibraryTraversal:
         last_error_url = None
         last_retry_count = 0
         start_time_cutoff_after = datetime.strptime(after_date, '%Y-%m-%d')
-        print(start_time_cutoff_after)
+        
+        
         response_data = {}
         if next_page_url is not None:
             response = requests.get(next_page_url)
             response_data = json.loads(response.text)
-            if "error" in response_data:
-                return {"data":"error"}
-            else :
-                return response_data; 
+            
+            return response_data; 
 
     @classmethod
     def generate_ad_archives_from_url(cls, failure_url, after_date="1970-01-01"):

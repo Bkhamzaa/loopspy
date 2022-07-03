@@ -3,12 +3,22 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Page Title</title>
+<title>User page</title>
 </head>
 <body>
+  
+  <img src="{{ img }}" alt="Trulli" width="500" height="333">
 
-<h1>This is a Heading</h1>
-
+  <video width=""height=""controls> 
+    <source src="{{ vid}}" type="video/mp4"> 
+</video> 
+<!-- 
+{% for items in data %}
+  <h1>test</h1>
+  <iframe src="{{url}}"></iframe>
+  <h4>{{a}}</h4>
+{% endfor %}
+-->
 <!-- 
 {% for i in data1 %}
     <img src="{{i.ad_snapshot_url}}" alt="..." Height="330px" width="330px">
